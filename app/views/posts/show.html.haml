@@ -1,0 +1,7 @@
+%p#notice= notice
+.name= @post.name
+.message= @post.message
+
+= link_to 'Edit', edit_post_path(@post)
+|
+\#{link_to 'Back', posts_path}
