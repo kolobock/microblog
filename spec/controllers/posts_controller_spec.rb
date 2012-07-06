@@ -24,7 +24,7 @@ describe PostsController do
   # Post. As you add validations to Post, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {name: 'valid name', message: '1: valid message\n2: valid message\n3: valid message'}
   end
   
   # This should return the minimal set of values that should be in the session
