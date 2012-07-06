@@ -42,3 +42,6 @@ end
 
 gem 'haml-rails'
 gem 'hpricot'
+
+gem 'cancan'
+gem 'devise'

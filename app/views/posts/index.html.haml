@@ -8,8 +8,12 @@
     %tr
       %td= post.name
       %td= post.message
-      %td= link_to 'Show', post
-      %td= link_to 'Edit', edit_post_path(post)
-      %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+      - if can? :read, @post
+        %td= link_to 'Show', post
+      - if can? :update, @post
+        %td= link_to 'Edit', edit_post_path(post)
+      - if can? :destroy, @post
+        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to 'New Post', new_post_path
+- if can? :create, Post
+  = link_to 'New Post', new_post_path

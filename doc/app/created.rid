@@ -1,0 +1,9 @@
+Fri, 06 Jul 2012 22:06:55 +0300
+doc/README_FOR_APP	Thu, 05 Jul 2012 21:20:50 +0300
+app/controllers/application_controller.rb	Fri, 06 Jul 2012 21:24:42 +0300
+app/controllers/posts_controller.rb	Fri, 06 Jul 2012 21:10:52 +0300
+app/helpers/application_helper.rb	Thu, 05 Jul 2012 21:20:50 +0300
+app/helpers/posts_helper.rb	Fri, 06 Jul 2012 00:23:22 +0300
+app/models/ability.rb	Fri, 06 Jul 2012 21:21:53 +0300
+app/models/post.rb	Fri, 06 Jul 2012 21:05:45 +0300
+app/models/user.rb	Fri, 06 Jul 2012 21:40:39 +0300

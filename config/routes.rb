@@ -1,6 +1,9 @@
 Microblog::Application.routes.draw do
-  resources :posts
+  devise_for :users, path: "members", path_names: { sign_in: 'login', sign_out: 'logout', password: 'remember', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'sign' }
 
+  resources :posts
+  resources :users
+  
   root :to => 'posts#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
