@@ -28,3 +28,6 @@
 **.orig
 #rerun.txt
 #pickle-email-*.html
+
+# Ignore IDEA & JetBrains RubyMine configuration files
+.idea
