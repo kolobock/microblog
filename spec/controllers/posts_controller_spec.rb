@@ -20,11 +20,17 @@ require 'spec_helper'
 
 describe PostsController do
 
+  let(:user) { stub_model(User, id: 1) }
+  # let(:ability) { Ability.new(user) }
+  
   # This should return the minimal set of attributes required to create a valid
   # Post. As you add validations to Post, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {name: 'valid name', message: '1: valid message\n2: valid message\n3: valid message'}
+    { 
+      name: 'valid name',
+      message: '1: valid message\n2: valid message\n3: valid message'
+    }
   end
   
   # This should return the minimal set of values that should be in the session
@@ -33,7 +39,19 @@ describe PostsController do
   def valid_session
     {}
   end
-
+  
+  before do
+    # setup
+    # @ability.can :manage, Post
+    # @request.env["devise.mapping"] = Devise.mappings[:admin]
+    sign_in user
+    @controller.stub(:current_user) { user }
+    # @ability = Ability.new(user)
+    # assign(:current_ability, @ability)
+    # controller.stub(:current_user, user)
+    # @view.stub(:current_user) { user }    
+  end
+  
   describe "GET index" do
     it "assigns all posts as @posts" do
       post = Post.create! valid_attributes

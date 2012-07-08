@@ -1,7 +1,10 @@
 require 'spec_helper'
+require 'ability_helper'
 
 describe "posts/show" do
   before(:each) do
+    setup_ability
+    # @ability.can :manage, Post
     @post = assign(:post, stub_model(Post))
   end
 

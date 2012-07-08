@@ -1,7 +1,11 @@
 require 'spec_helper'
+require 'ability_helper'
 
 describe "posts/index" do
+    
   before(:each) do
+    setup_ability
+    # @ability.can :manage, Post
     assign(:posts, [
       stub_model(Post),
       stub_model(Post)
