@@ -7,7 +7,7 @@ class Ability
       can :manage, :all
     elsif user.moderator?
       can :update, Post
-      can :manage, Comment
+      #can :manage, Comment
     elsif user.publisher?
       can :create, Post
     end
