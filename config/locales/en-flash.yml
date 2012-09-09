@@ -1,0 +1,14 @@
+en:
+  posts:
+    create:
+      flash:
+        notice: 'Post was successfully created'
+        error: "Post was not created: %{msg}."
+    update:
+      flash:
+        notice: 'Post was successfully updated'
+        error: "Post was not updated: %{msg}."
+    destroy:
+      flash:
+        notice: 'Post was successfully destroyed'
+        error: "Post was not destroyed: %{msg}."

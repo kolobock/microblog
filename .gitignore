@@ -31,3 +31,6 @@
 
 # Ignore IDEA & JetBrains RubyMine configuration files
 .idea
+
+# Ignore MAC OS X files
+.DS_Store
