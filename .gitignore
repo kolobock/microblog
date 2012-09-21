@@ -34,3 +34,5 @@
 
 # Ignore MAC OS X files
 .DS_Store
+
+/config/database.yml
