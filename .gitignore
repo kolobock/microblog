@@ -35,4 +35,7 @@
 # Ignore MAC OS X files
 .DS_Store
 
-/config/database.yml
+#/config/database.yml
+
+# vmcu related config
+manifest.yml
