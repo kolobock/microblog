@@ -23,6 +23,7 @@
 /vendor/bundle
 
 /public/system/*
+/public/assets/*
 /coverage/
 /spec/tmp/*
 **.orig
