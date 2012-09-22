@@ -1,23 +1,60 @@
 !!!
-%html
+/[if lt IE 7 ]><html class="ie ie6" lang="en">
+/[if IE 7 ]><html class="ie ie7" lang="en">
+/[if IE 8 ]><html class="ie ie8" lang="en">
+/[if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
   %head
+    /
+      Basic Page Needs
+      \==================================================
+    %meta{ charset: 'utf-8' }/
     %title Microblog
+    %meta{ name: "description", content: "microblog blog post" }/
+    %meta{ name: "author", content: "Kostik Kolobov <kolobock (at) gmail (dot) com>" }/
+    /
+      Mobile Specific Metas
+      \==================================================
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1" }/
+    /
+      CSS
+      \==================================================
     = stylesheet_link_tag    "application", :media => "all"
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    /
+    /
+      Favicons
+      \==================================================
+    %link{ rel: "shortcut icon",    href: "images/favicon.ico" }/
+    %link{ rel: "apple-touch-icon", href: "images/apple-touch-icon.png" }/
+    %link{ rel: "apple-touch-icon", href: "images/apple-touch-icon-72x72.png",   sizes: "72x72" }/
+    %link{ rel: "apple-touch-icon", href: "images/apple-touch-icon-114x114.png", sizes: "114x114" }/
+
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    .flash_messages
-      -#%p#notice.notice= notice
-      -#%p#alert.alert= alert
-      = render_flash_messages
-    #user_nav
-      - if user_signed_in?
-        Signed in as
-        = current_user.email
-        \. Not you?
-        = link_to 'Sign out', destroy_user_session_path, :method => :delete
-      - else
-        = link_to 'Sign up', new_user_registration_path
-        or
-        = link_to 'sign in', new_user_session_path
-    = yield
+    /
+      Primary Page Layout
+      \==================================================
+
+    .container
+      .flash_messages
+        -#%p#notice.notice= notice
+        -#%p#alert.alert= alert
+        = render_flash_messages
+      #user_nav
+        - if user_signed_in?
+          Signed in as
+          = current_user.email
+          \. Not you?
+          = link_to 'Sign out', destroy_user_session_path, :method => :delete
+        - else
+          = link_to 'Sign up', new_user_registration_path
+          or
+          = link_to 'sign in', new_user_session_path
+      = yield
+    /
+      End Document
+      \==================================================
