@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    attributes:
+      post:
+        name: 'Name'
+    errors:
+      messages:
+        blank: "can't be blank"
+      models:
+        post:
+          custom_message: 'custom error message'
+  errors:
+    format: '%{attribute} %{message}'
+    attribute_name: 'This'
+    messages:
+      blank: "can't be blank"
+      too_long: 'is too long (maximum is %{count} characters)'
+      not_in_range: 'should be in %{min}..%{max}'
