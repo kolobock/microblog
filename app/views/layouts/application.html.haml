@@ -40,9 +40,7 @@
       \==================================================
 
     .container
-      .flash_messages
-        -#%p#notice.notice= notice
-        -#%p#alert.alert= alert
+      %span.flash_messages.flash
         = render_flash_messages
       #user_nav
         - if user_signed_in?
