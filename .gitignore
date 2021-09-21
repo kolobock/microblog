@@ -40,3 +40,5 @@
 
 # vmcu related config
 manifest.yml
+
+tags
