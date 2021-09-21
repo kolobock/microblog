@@ -49,7 +49,7 @@
           Signed in as
           = current_user.email
           \. Not you?
-          = link_to 'Sign out', destroy_user_session_path, :method => :delete
+          = link_to 'Sign out', destroy_user_session_path, data: { method: :delete }
         - else
           = link_to 'Sign up', new_user_registration_path
           or
