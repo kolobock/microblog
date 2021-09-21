@@ -1,0 +1,94 @@
+span .flash {
+    font-weight: bold;
+    display: block;
+    position: relative;
+    line-height: 21px;
+    padding: 10px;
+    padding-right: 30px;
+@include box-shadow(1px 1px 2px 4px rgba(0, 0, 0, 0.8), inset none);
+}
+
+span .flash .success, span .flash .notice {
+    color: #22aa22;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    border-bottom: #4e7b22 1px solid;
+@include box-shadow(0px 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(180, 213, 132, 1));
+@include gradient(#A3CE68, #708e4a);
+}
+
+span .flash .notice-w {
+    color: #22aa22;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    border-bottom: #9e9165 1px solid;
+@include box-shadow(0px 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 243, 185, 1));
+@include gradient(#d2d961, #baad7e);
+    }
+
+span .flash .error, span .flash .alert, span .flash .error-message {
+    color: #aa2222;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    border-bottom: #8a252a 1px solid;
+@include gradient(#dc3f4b, #b73137);
+@include box-shadow(0px 0px 1px 0px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(228, 73, 80, 1));
+    }
+
+span .flash a.close_flash {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    cursor: pointer;
+}
+
+span .flash .is-sticky {
+    left: 221px;
+    right: 0;
+@include box-sizing(border-box);
+    z-index: 1;
+}
+span .flash .is-sticky .min {
+    left: 61px;
+}
+
+span .flash .is-sticky .w960 {
+    width: 739px;
+    left: auto;
+    right: auto;
+}
+
+span .flash .is-sticky .w960.min {
+    width: 899px;
+}
+
+span.error-message, span.field-with-errors {
+    line-height: 21px;
+    padding: 5px 0px 5px 8px;
+    display: inline-block;
+    position: relative;
+    margin: 6px 0 0;
+    font-weight: bold;
+    color: #c54949;
+@include animate(fade-slide-down .4s ease-in);
+@include border-radius(3px);
+}
+
+span.hint .invalid, span.hint.valid {
+    padding: 3px 6px 2px;
+    position: relative;
+    right: 0;
+    margin: 6px 0 0;
+    width: 447px;
+    clear: both;
+    float: left;
+@include border-radius(2px);
+    font-weight:bold;
+    opacity:0.9;
+@include animate(fade-slide-down .4s ease-in);
+}
+
+&.invalid {
+    color: #c54949;
+}
+
+&.valid {
+    color: #4e9c1e;
+}
