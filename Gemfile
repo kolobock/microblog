@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4'
+gem 'rails', '~> 7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -45,7 +45,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.0'
+  gem 'rspec-rails', '~> 5.1'
 end
 
 gem 'haml-rails'
